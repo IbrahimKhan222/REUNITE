@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Connect - Networking Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between px-6 py-4 bg-white shadow-md">
+        <div class="flex items-center space-x-4">
+            <div>
+                <img class="w-40 cursor-pointer" src="./reunite logo.png" alt="ReUnite" onclick="window.location.href='navbar.html'">
+            </div>
+        </div>
+
+        <div class="flex space-x-4">
+            <a href="client/index.html" class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-100">Announcements</a>
+            <a href="#" class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-100">Resources</a>
+            <input type="text" id="searchInput" placeholder="Search alumni, colleges..." class="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200">
+            <a href="client/index.html" id="authBtn" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Account</a>
+            <a href="client/account.html" id="navbarProfileLink" style="display:none">
+                <img id="navbarProfilePic" src="client/images/default-avatar.png" alt="Profile" style="width:40px;height:40px;border-radius:50%;object-fit:cover;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center h-[60vh] mb-8" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1');">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div class="text-center text-white max-w-xl">
+          <h1 class="text-4xl font-bold mb-4">🎓 ReUnite to Rise Together.</h1>
+          <p class="text-lg mb-6">Connect with fellow graduates, undergraduates and faculties, create and explore opportunities, and grow together.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-6 py-8">
+        
+        <!-- Header Section -->
+        
+
+        <!-- Main Result Container -->
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+            <div id="result" class="result">
+                <div class="loading">Loading colleges...</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>

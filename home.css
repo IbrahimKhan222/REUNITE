@@ -1,0 +1,123 @@
+/* home.css - extracted from home.html */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.loading::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Cards */
+.college-card, .branch-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.college-card:hover, .branch-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: #3b82f6;
+}
+
+.college-card img { display: block; margin: 0 auto 16px auto; width: 110px; height: 110px; object-fit: contain; }
+.college-card { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-height: 260px; }
+.college-card h3 { text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; font-size: 1.25rem; margin-bottom: 10px; }
+.college-card p { text-align: center; }
+
+.branch-card h3 {
+    margin: 0 0 12px 0;
+    color: #1f2937;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.branch-card p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    opacity: 0.7;
+}
+
+/* Alumni Cards */
+.alumni-card {
+    border: 1px solid #e5e7eb;
+    padding: 24px;
+    margin: 20px 0;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.alumni-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: #3b82f6;
+}
+
+.alumni-card h3 {
+    margin: 0 0 15px 0;
+    color: #1f2937;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.alumni-card p {
+    margin: 8px 0;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.alumni-card .detail-label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.alumni-card a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 16px;
+    background: #f3f4f6;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.alumni-card a:hover {
+    background: #3b82f6;
+    color: white;
+}
