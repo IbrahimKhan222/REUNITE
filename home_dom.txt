@@ -1,0 +1,60 @@
+// DOM manipulation code from home.js
+
+// renderColleges
+const renderCollegesDOM = `
+    <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-2">Let's start by exploring people from your college on LinkedIn</h2>
+        <p class="text-lg text-gray-600">Select your institution to explore branches and connect with fellow alumni</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {collegeCards}
+    </div>
+`;
+
+// renderBranches
+const renderBranchesDOM = `
+    <button onclick="fetchColleges()" class="mb-6 inline-flex items-center px-4 py-2 border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Back to Colleges
+    </button>
+    <nav class="mb-6 bg-gray-50 px-4 py-2 rounded-lg">
+        <span onclick="fetchColleges()" class="cursor-pointer text-blue-600 hover:text-blue-800">Colleges</span> 
+        <span class="text-gray-500 mx-2">></span>
+        <span class="text-gray-900 font-medium">{currentCollege}</span>
+    </nav>
+    <div class="text-center my-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-2">Branches at {currentCollege}</h2>
+        <p class="text-lg text-gray-600">Select a department to view profiles and connect with people</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {branchesCards}
+    </div>
+`;
+
+// renderAlumni
+const renderAlumniDOM = `
+    <button onclick="fetchBranches('{currentCollege}')" class="mb-6 inline-flex items-center px-4 py-2 border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Back to Branches
+    </button>
+    <nav class="mb-6 bg-gray-50 px-4 py-2 rounded-lg">
+        <span onclick="fetchColleges()" class="cursor-pointer text-blue-600 hover:text-blue-800">Colleges</span> 
+        <span class="text-gray-500 mx-2">></span>
+        <span onclick="fetchBranches('{currentCollege}')" class="cursor-pointer text-blue-600 hover:text-blue-800">{currentCollege}</span> 
+        <span class="text-gray-500 mx-2">></span>
+        <span class="text-gray-900 font-medium">{currentBranch}</span>
+    </nav>
+    <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-2">People from {currentBranch} department at {currentCollege}</h2>
+        <p class="text-lg text-gray-600">Connect with people from {currentBranch} department at {currentCollege}</p>
+    </div>
+    <div class="space-y-6">
+        {alumniCards}
+    </div>
+`;
+
+// showLoading, showError, etc. can be similarly moved if needed.
